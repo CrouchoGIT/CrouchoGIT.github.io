@@ -1,25 +1,27 @@
-:root {
-    color-scheme: light dark;
-
-    --bg-light: #fcf6e5;
-    --bg-dark:  #0e3a25;
-
-    --fg-light: #5d6d74;
-    --fg-dark: #96a0a0;
-}
+/*
+    Ensure you include colors.css and spacing.css before this css file as they depend on those
+*/
 
 body {
     background-color: light-dark(var(--bg-light), var(--bg-dark));
     color: light-dark(var(--fg-light), var(--fg-dark));
 }
 
-.page-header {
+.page-header,
+.page-footer{
     display: flex;
     justify-content: center;
+}
+
+.page-header {
     border-bottom: 1px solid light-dark(var(--fg-light), var(--fg-dark));
 }
 
 .page-body {
+}
+
+.page-footer {
+    border-top: 1px solid light-dark(var(--fg-light), var(--fg-dark));
 }
 
 .page-row {
